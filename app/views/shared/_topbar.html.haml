@@ -13,7 +13,7 @@
           = link_to 'Login/Cadastro', new_user_session_path, class: 'nav-link'
       - if user_signed_in?
         %li.nav-item.active
-          %a.nav-link{:href => '#'}
+          %a.nav-link{:href => new_company_path}
             Minha Empresa
         %li.nav-item.active
           %a.nav-link{:href => '#'}
