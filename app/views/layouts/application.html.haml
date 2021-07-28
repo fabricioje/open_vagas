@@ -12,3 +12,6 @@
     = render 'shared/topbar'
     %main.container{:role => "main"}
       = yield
+    %footer
+      %p Desenvolvido por Fabrício
+      %p= "Desde de #{Time.new.year}"
