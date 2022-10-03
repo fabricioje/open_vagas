@@ -10,7 +10,6 @@
   #the-count
     %span#current 0
     %span#maximun / 360
-  -# %label Descrição
-  -# = f.rich_text_area :description
-  = f.input :description
+  %label Descrição
+  = f.rich_text_area :description
   = f.button :submit, class: 'btn btn-primary'
