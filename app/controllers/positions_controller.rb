@@ -40,7 +40,6 @@ class PositionsController < ApplicationController
   def set_position
     @position = @company.positions.find(params[:id])
   end
-  
 
   def params_position
     params.require(:position).permit(:name, :career, :contract, :remote, :publish, :city, :state, :summary, :description)
@@ -58,6 +57,5 @@ class PositionsController < ApplicationController
   def set_i18n_contracts
     @contracts = I18n.t('activerecord.attributes.position.contracts')
   end
-  
   
 end
