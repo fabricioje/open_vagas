@@ -11,6 +11,11 @@ import "channels"
 import 'bootstrap'
 import './src/application.scss'
 
+// Importando sweetalert2, para deixar os alerts mais agradáveis
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+window.Swal = Swal
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
