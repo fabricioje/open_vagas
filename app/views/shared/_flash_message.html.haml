@@ -3,10 +3,14 @@
     - @icon = 'success'
     - @tittle = 'Tudo certo!'
     - @message = flash[:success]
-  - else
+  - elsif flash[:error].present?
     - @icon = 'error'
     - @tittle = 'Erro'
     - @message = flash[:error]
+  - else
+    - @icon = 'success'
+    - @tittle = 'Alerta'
+    - @message = flash[:notice]
 
   :javascript
     Swal.fire({
