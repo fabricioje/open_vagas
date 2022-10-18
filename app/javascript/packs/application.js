@@ -33,7 +33,7 @@ require("trix")
 require("@rails/actiontext")
 
 // TODO => VERIFICAR POR QUE ESSE BLOCO NAO ESTA FUNCIONANDO
-$(document).ready(function(){
+$(document).on('ready turbolinks:load', function(){
   if ($('.count-textarea').length > 0){
     $('#current').text($('.count-textarea').val().length);
     $('.count-textarea').keyup(function(){
