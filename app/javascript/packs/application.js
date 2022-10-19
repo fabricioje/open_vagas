@@ -20,6 +20,9 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+// Deixando jQuery visivel a nível de global e window
+global.$ = global.jQuery = jQuery;
+window.$ = window.jQuery = jQuery;
 
 $(function () {
     'use strict'
