@@ -1,9 +1,10 @@
-Rails.application.routes.draw do
-  get 'applicants/index'
-  get 'applicants/new'
+# frozen_string_literal: true
 
+Rails.application.routes.draw do
   resources :companies, only: [:new, :edit, :update, :create]
-  resources :positions
+  resources :positions do
+    resources :applicants, only: [:index]
+  end
   resources :applicants, only: [:index, :new, :create]
   devise_for :users
   root 'home#index'
